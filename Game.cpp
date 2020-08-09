@@ -4,8 +4,6 @@
 #include "Spriterenderer.h"
 #include "SpriteSheet.h"
 
-#include "effolkronium/random.hpp"
-namespace ek = effolkronium;
 
 Game::Game(unsigned int width, unsigned int height) : state(GameState::GAME_ACTIVE), keys(), width(width), height(height)
 {
