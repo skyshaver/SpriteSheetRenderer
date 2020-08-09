@@ -30,7 +30,7 @@ void Game::init()
     ResourceManager::loadTexture("textures/sprites.png", true, "sprites");
  
     renderer = std::make_unique<SpriteRenderer>(ResourceManager::getShader("sprite"));
-    spriteSheet = std::make_unique<SpriteSheet>(64, 16, 16, 16, 16, ResourceManager::getShader("sprite"));
+    spriteSheet = std::make_unique<SpriteSheet>(128, 128, 16, 16, ResourceManager::getShader("sprite"));
 }
 
 void Game::processInput(float dt)
@@ -70,7 +70,8 @@ void Game::render()
     renderer->drawSprite(ResourceManager::getTexture("background"),
         glm::vec2(0.0f, 0.0f), glm::vec2(this->width, this->height), 0.0f
     );
-    spriteSheet->drawSpriteFromSheet(ResourceManager::getTexture("sprites"), glm::vec2(0.f, 0.f), glm::vec2(10, 10), 0.f, glm::vec3(1.f), 1);
+    spriteSheet->drawSpriteFromSheet(ResourceManager::getTexture("sprites"), glm::vec2(0.f, 0.f), glm::vec2(5, 5), 0.f, glm::vec3(1.f), 0);
+    spriteSheet->drawSpriteFromSheet(ResourceManager::getTexture("sprites"), glm::vec2(0.f, 16.f), glm::vec2(5, 5), 0.f, glm::vec3(1.f), 8);
 }
 
 

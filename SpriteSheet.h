@@ -23,7 +23,7 @@ class SpriteSheet
     Shader shader;
 
 public:
-    SpriteSheet(int tex, int texWidth, int texHeight, int spriteWidth, int spriteHeight, const Shader& shader);
+    SpriteSheet(int texWidth, int texHeight, int spriteWidth, int spriteHeight, const Shader& shader);
     ~SpriteSheet();
 
     void drawSpriteFromSheet(const Texture2D& texture, glm::vec2 pos, glm::vec2 size, float rotate, glm::vec3 color, int frameIndex);

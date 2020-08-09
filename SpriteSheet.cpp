@@ -1,12 +1,9 @@
 
-
 #include "SpriteSheet.h"
-
 #include "Texture2D.h"
 
-
-SpriteSheet::SpriteSheet(int tex, int texWidth, int texHeight, int spriteWidth, int spriteHeight, const Shader& shader)
-    : tex(tex), texWidth(texWidth), texHeight(texHeight), spriteWidth(spriteWidth), spriteHeight(spriteHeight), shader(shader)
+SpriteSheet::SpriteSheet(int texWidth, int texHeight, int spriteWidth, int spriteHeight, const Shader& shader)
+    : texWidth(texWidth), texHeight(texHeight), spriteWidth(spriteWidth), spriteHeight(spriteHeight), shader(shader)
 {
 }
 
@@ -73,6 +70,6 @@ void SpriteSheet::drawSpriteFromSheet(const Texture2D& texture, glm::vec2 pos, g
     texture.bind();
 
     glBindVertexArray(this->quadVAO);
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     glBindVertexArray(0);
 }
