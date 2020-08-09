@@ -1,0 +1,12 @@
+sprite sheet notes
+
+need 
+	shader class *
+	texture 2d class *
+	resource manager *
+	game class *
+	game object *
+	sprite shaders *
+	spriterenderer *
+	spritesheet *
+	main *
